@@ -26,6 +26,13 @@
     transition: opacity 0.5s;
   }
 
+  .container {
+    display: flex;
+    flex-direction: column; /* 上から下に並べる */
+    align-items: center;    /* 中央揃え */
+}
+
+
   /* 通常の大喜利表示（画像のすぐ下・大きめ） */
   #text {
     margin-top: 8px;
@@ -77,9 +84,10 @@
 
 <h2>画像をタップ！</h2>
 
-<img src="ogiri.PNG" id="ogiriImage" alt="大喜利画像">
-
-<div id="text">タップすると一言が出ます</div>
+<div class="container">
+  <img src="ogiri.PNG" id="ogiriImage" alt="大喜利画像">
+  <div id="text">タップすると一言が出ます</div>
+</div>
 
 <script>
   const ogiriList = [
@@ -186,7 +194,8 @@
   ];
 
   const fixedMessage =
-    "お疲れ様でした。こんな私たちのいる宮城県の治安を守ってください。";
+    "お疲れ様でした。
+こんな私たちのいる宮城県の治安を守ってください。";
 
   let tapCount = 0;
 
