@@ -19,12 +19,13 @@
   }
 
   img {
-    max-width: 90%;
-    height: auto;
-    cursor: pointer;
-    margin-top: 12px;
-    transition: opacity 0.5s;
-  }
+  width: 95%;
+  max-width: 95%;
+  height: auto;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: opacity 0.5s;
+}
 
   .container {
     display: flex;
@@ -194,9 +195,8 @@
   ];
 
   const fixedMessage =
-    "お疲れ様でした。
-こんな私たちのいる宮城県の治安を守ってください。";
-
+    "お疲れ様でした。<br>こんな私たちのいる宮城県の治安を守ってください。";
+ 
   let tapCount = 0;
 
   const textDiv = document.getElementById("text");
@@ -208,7 +208,7 @@
     tapCount++;
 
     if (tapCount === 5) {
-      textDiv.textContent = fixedMessage;
+      textDiv.innerHTML = fixedMessage;
       textDiv.classList.add("special");
       image.classList.add("dim");
     } else {
